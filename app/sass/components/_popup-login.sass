@@ -1,0 +1,101 @@
+.form-login
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 40%
+    margin: 0 auto
+    display: none
+    &__item
+        margin: 10px 0
+        text-align: center
+        width: 100%
+        padding: 10px 0
+        border-radius: 10px
+        border: none
+        background-color: #80808026
+        cursor: pointer
+        transition: all .4s
+        &:hover
+            transform: scale(1.1)
+        &:active
+            transform: scale(.9)
+    &__login
+    &__password
+    &__btn
+        width: 40%
+        border: none
+        background-color: $btn-bg
+        color: #fff
+        text-transform: uppercase
+
+
+.sign-box
+    display: flex
+    justify-content: center
+    margin: 10px 0
+    &__up
+    &__in
+.sign
+    margin: 0 7px
+    text-transform: uppercase
+    cursor: pointer
+    font-family: $Montserrat
+    font-size: 23.2px
+    line-height: 1.2
+    font-weight: 400
+    color: #515151
+    border-bottom: 2px solid #515151
+    transition: all .4s
+    &:hover
+        transform: scale(1.1)
+        color: $btn-bg
+        border-bottom: 2px solid $btn-bg
+    &:active
+        transform: scale(.9)
+
+
+.footer-login
+    background-color: #80808026
+    position: absolute
+    bottom: 0
+    width: 100%
+    left: 0
+    height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    &__question
+        color: black
+        transition: all .4s
+        &:hover
+            transform: scale(1.1)
+        &:active
+            transform: scale(.9)
+
+.sign-active
+    color: $btn-bg
+    border-bottom: 2px solid $btn-bg
+.form-login-active
+    display: flex
+
+
+.form__becomeMember
+    display: flex
+    flex-direction: column
+    align-items: center
+    &--name
+    &--tel
+    &--text
+        text-align: center
+        opacity: 0.7
+        font-family: $Opensans
+        font-size: 19.2px
+        line-height: 1.2
+        font-weight: 400
+        color: #515151
+        margin: 50px auto
+        max-width: 920px
+    &--btn
+        width: 20%
+    &--item
+        max-width: 40%

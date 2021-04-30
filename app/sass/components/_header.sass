@@ -1,0 +1,121 @@
+.header
+.navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 30px 0
+    background: #fff
+    &__list
+        display: flex
+    &__item
+        margin: 0 15px
+        &:hover
+            transform: scale(1.1)
+        &:active
+            transform: scale(.9)
+    &__link
+        text-transform: uppercase
+        opacity: 0.67
+        font-family: $Opensans
+        font-size: 13.2px
+        line-height: 77px
+        font-weight: 600
+        color: #666666
+        transition: all .4s
+        &:hover
+            transform: scale(1.5)
+            opacity: 1
+        &:active
+            transform: scale(.9)
+.navbar-wrapper
+    z-index: 10
+.logo
+    &__link
+        display: flex
+        align-items: baseline
+    &__img
+        height: 36px
+        margin-right: 10px
+    &__text
+        font-family: $Nunito
+        font-size: 31.2px
+        line-height: 77px
+        font-weight: 400
+        text-transform: uppercase
+        color: #6d6e70
+.login
+    opacity: 0.81
+    background-color: $btn-bg
+    font-family: $Opensans
+    font-size: 13.2px
+    font-weight: 600
+    color: #ffffff
+    border: none
+    padding: 15px 30px
+    border-radius: 30px
+    text-transform: uppercase
+    cursor: pointer
+    transition: all .4s
+    &:hover
+        opacity: 1
+        transform: scale(1.1)
+    &:active
+        transform: scale(0.9)
+.mobile-menu-btn
+    display: none
+    position: relative
+    width: 30px
+    height: 2px
+    background-color: #000
+    margin: 10px 0
+    &:after,&:before
+        content: ''
+        background-color: #000
+        width: 100%
+        height: 3px
+        position: absolute
+        transition: all .3s 
+    &:after
+        top: -10px
+    &:before
+        top: 10px
+.mobile-menu-btn.active
+    background-color: transparent
+    &:after
+        transform: rotate(45deg)
+        top: 0
+    &:before
+        transform: rotate(-45deg)
+        top: 0
+    
+@media screen and (max-width: 992px)
+    .navbar
+        flex-direction: column
+        position: relative
+        top: 0
+        left: 50%
+        width: 70%
+        transform: translateX(-50%)
+        &__list 
+            padding: 0
+    .login
+@media screen and (max-width: 870px) 
+    .navbar-wrapper
+        position: fixed
+        width: 100%
+        background: #fff 
+        top: 0
+    .navbar
+        flex-direction: row
+        padding: 0
+
+        &__list
+            display: none
+    .mobile-menu-btn
+        display: block
+@media screen and (max-width: 600px) 
+    .navbar
+        flex-direction: column
+        padding-bottom: 10px
+    .login
+        margin-top: 20px

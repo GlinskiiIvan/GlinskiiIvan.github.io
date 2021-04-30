@@ -1,0 +1,108 @@
+.section-call
+    padding: 46px 0
+    position: relative
+    &:after,&:before
+        content: ''
+        position: absolute
+        width: 50%
+        height: 100%
+        top: 0
+        z-index: -1
+    &:after
+        background-color: #e2f8ff
+        left: 0
+    &:before
+        background-color: #f5f9eb
+        right: 0
+.call
+    display: flex
+    justify-content: space-between
+.call-item
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &__img
+        max-width: 133px
+        min-height: 100px
+        object-fit: cover
+        margin-right: 45px
+    &__content
+        width: 66.6%
+    &__title
+        font-family: $Montserrat
+        font-size: 23.2px
+        line-height: 1.2
+        font-weight: 400
+        color: #515151
+        margin: 0
+        margin-bottom: 34px
+    &__text
+        font-family: $Opensans
+        font-size: 17.2px
+        line-height: 1.2
+        font-weight: 400
+        color: #515151
+        margin-bottom: 31px
+    &__btn
+        font-family: $Opensans
+        font-size: 14.9px
+        line-height: 1.2
+        font-weight: 600
+        color: #ffffff
+        border: none
+        border-radius: 10px
+        padding: 19px 26px 
+        cursor: pointer
+        transition: all .4s
+        &:hover
+            transform: scale(1.1)
+        &:active
+            transform: scale(0.9)
+        &--left
+            background-color: #26a6d1
+        &--right
+            background-color: #add136
+.call-left    
+    margin-right: 60px
+    margin-left: -60px
+    // background-color: green
+.call-right
+    margin-left: 60px
+    margin-right: -60px
+    // background-color: red
+@media screen and (max-width: 1180px)
+    .call-left
+        margin-left: 0
+
+    .call-right
+        margin-right: 0  
+@media screen and (max-width: 992px) 
+    .call-item
+        flex-direction: column
+        text-align: center
+        &__img
+            margin: 0
+            margin-bottom: 30px
+    .call-left
+        margin-right: 0 
+    .call-right
+        margin-left: 0
+@media screen and (max-width: 600px) 
+    .section-call
+        padding: 0
+        &:after,&:before
+            width: 100%
+            height: 50%
+            top: auto
+        &:after
+            bottom: 0
+        &:before
+            top: 0
+    .call
+        flex-direction: column
+    .call-item
+        margin: 50px 0
+@media screen and (max-width: 320px) 
+    .call-item
+        &__btn
+            padding: 19px 20px

@@ -1,0 +1,69 @@
+@import "vars"
+@import "fonts"
+@import "components/header"
+@import "components/section-slider" 
+@import "components/section-our-work"   
+@import "components/section-call"
+@import "components/section-projects"
+@import "components/section-reviews"
+@import "components/section-sponsors"
+@import "components/footer"
+
+@import "components/popup-mobile-menu"
+@import "components/popup-login"
+*
+    margin: 0
+    box-sizing: border-box
+
+html 
+    scroll-behavior: smooth
+
+h1 
+    margin: 0
+
+.container
+    width: 100%
+    max-width: 1056px
+    margin: 0 auto
+    padding: 0 15px
+
+img 
+    max-width: 100%
+    object-fit: cover
+
+a
+    text-decoration: none
+
+li
+    list-style: none
+
+.no-scroll
+    overflow: hidden
+
+.arrow-up
+    width: 50px
+    height: 50px
+    background-color: $btn-bg
+    border-radius: 100%
+    position: fixed
+    z-index: 100
+    bottom: 40px
+    right: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: all .4s
+    cursor: pointer
+    &:hover
+        transform: scale(1.1)
+    &:active
+        transform: scale(.9)
+.arrow-up img 
+    transform: rotate(-90deg)
+
+@media screen and (max-width: 870px) 
+    body
+        margin-top: 76.8px!important
+@media screen and (max-width: 600px)
+    body
+        margin-top: 173.2px!important

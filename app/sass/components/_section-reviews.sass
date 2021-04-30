@@ -1,0 +1,115 @@
+.section-reviews
+    padding: 60px 0
+    background-image: url("../../images/dest/reviews_bg.png")
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+.reviews-info
+    text-align: center
+    width: 80%
+    margin: 0 auto
+    margin-bottom: 98px
+    &__title
+        font-family: $Opensans
+        font-size: 39.2px
+        line-height: 1.2
+        font-weight: 600
+        color: #9ec02d
+        margin-bottom: 40px
+    &__text
+        font-family: $Opensans
+        font-size: 19.2px
+        line-height: 1.2
+        font-weight: 400
+        color: #949494
+
+.reviews
+    display: flex
+    justify-content: space-between
+    &__item
+        width: 40%
+    &__content
+        background-color: #fff
+        text-align: center
+        padding: 25px
+        border-radius: 10px
+        margin-bottom: 50px
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            left: 17%
+            bottom: 0
+            transform: translateY(100%)
+            width: 0
+            height: 0
+            border-left: 25px solid #fff
+            border-bottom: 29px solid transparent
+    &__title
+        font-family: $Opensans
+        font-size: 30px
+        line-height: 1.2
+        font-weight: 600
+        color: #9ec02d
+        margin-bottom: 15px
+    &__text
+        font-family: $Opensans
+        font-size: 13.2px
+        line-height: 1.2
+        font-weight: 400
+        color: #848484
+    &__people
+        display: flex
+        align-items: center
+        padding: 0 40px
+    &__img
+        border-radius: 10px
+        margin-right: 20px
+        width: 60px
+        height: 60px
+        object-fit: cover
+    &__name
+        font-family: $Montserrat
+        font-size: 15.2px
+        line-height: 1.2
+        font-weight: 400
+        color: #494949
+@media screen and (max-width: 850px)
+    .reviews
+        &__content
+            &:after
+                left: 22% 
+@media screen and (max-width: 769px)
+    .reviews
+        justify-content: space-around
+@media screen and (max-width: 650px) 
+    .reviews
+        &__content
+            &:after
+                left: 30%
+@media screen and (max-width: 600px)
+    .reviews
+        flex-direction: column
+        align-items: center
+        &__item
+            width: 60%
+            margin-bottom: 40px
+        &__content
+            &:after
+                left: 22%
+@media screen and (max-width: 470px)
+    .reviews
+        &__content
+            &:after
+                left: 30%
+@media screen and (max-width: 375px)
+    .reviews
+        &__content
+            &:after
+                left: 35%
+        &__people
+            flex-direction: column
+            padding: 0
+            padding-right: 67px
+        &__img
+            margin: 0
